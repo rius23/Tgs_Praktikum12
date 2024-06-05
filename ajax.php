@@ -1,59 +1,3 @@
-# Praktikum6ci4
-
-Stephen Pratama Kurnia
-
-TI.22.A5 312210635
-
-## github ci4 utama : https://github.com/steprtm/lab7_php_ci
-
-## Contoh:
-
-
-![art](https://github.com/steprtm/Praktikum6ci4/assets/129705802/f222e3f8-78f6-48c2-a764-0f861305dec1)
-
-
-### AjaxController.php
-![Code_9y5k8JsYz0](https://github.com/steprtm/Praktikum6ci4/assets/129705802/86a56e63-9912-4537-b9ef-9904f7fec969)
-
-
-```
-<?php
-namespace App\Controllers;
-use CodeIgniter\Controller;
-use CodeIgniter\HTTP\Request;
-use CodeIgniter\HTTP\Response;
-use App\Models\ArtikelModel;
-
-
-class AjaxController extends Controller
-{
-public function index()
-{
-return view('ajax/index');
-}
-public function getData()
-{
-$model = new ArtikelModel();
-$data = $model->findAll();
-// Kirim data dalam format JSON
-return $this->response->setJSON($data);
-}
-public function delete($id)
-{
-$model = new ArtikelModel();
-$data = $model->delete($id);
-$data = [
-'status' => 'OK'
-];
-// Kirim data dalam format JSON
-return $this->response->setJSON($data);
-}
-}
-```
-
-### ajax.php
-
-```
 <?= $this->include('template/header'); ?>
 
 <h1>Data Artikel</h1>
@@ -128,5 +72,3 @@ return $this->response->setJSON($data);
 </script>
 
 <?= $this->include('template/footer'); ?>
-
-```
