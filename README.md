@@ -1,10 +1,8 @@
-# Praktikum6ci4
+# Praktikum6
 
-Stephen Pratama Kurnia
+Serius Ndruru
 
-TI.22.A5 312210635
-
-## github ci4 utama : https://github.com/steprtm/lab7_php_ci
+TI.22.A5 312210508
 
 ## Contoh:
 
